@@ -100,19 +100,19 @@ public class LoginTest extends TestCase {
 
 
 	    // Create WI and create Test Case linked to it
-//		TimeUnit.SECONDS.sleep(5);
-//	    driver.findElement(By.id("create_wi_icon_systemrequirement")).click();
-//		WebDriverWait wait2 = new WebDriverWait(driver, 3);
-//		wait2.until(ExpectedConditions.presenceOfElementLocated(By.className("GAMH4D-CIN")));
-//		driver.findElement(By.className("GAMH4D-CIN")).sendKeys("Selenium Test Automation");
-//
-//		WebDriverWait wait3 = new WebDriverWait(driver, 3);
-//		wait3.until(ExpectedConditions.presenceOfElementLocated(By.className("GAMH4D-CIN")));		
-//		driver.findElement(By.id("DOM_280")).click();
-//
-//		String Ctrl_S = Keys.chord(Keys.CONTROL, "S");
-//		driver.findElement(By.className("GAMH4D-CIN")).sendKeys(Ctrl_S);
-//    
+		TimeUnit.SECONDS.sleep(5);
+	    driver.findElement(By.id("create_wi_icon_systemrequirement")).click();
+		WebDriverWait wait2 = new WebDriverWait(driver, 3);
+		wait2.until(ExpectedConditions.presenceOfElementLocated(By.className("GAMH4D-CIN")));
+		driver.findElement(By.className("GAMH4D-CIN")).sendKeys("Selenium Test Automation");
+
+		WebDriverWait wait3 = new WebDriverWait(driver, 3);
+		wait3.until(ExpectedConditions.presenceOfElementLocated(By.className("GAMH4D-CIN")));		
+		driver.findElement(By.id("DOM_280")).click();
+
+		String Ctrl_S = Keys.chord(Keys.CONTROL, "S");
+		driver.findElement(By.className("GAMH4D-CIN")).sendKeys(Ctrl_S);
+    
 	    
 	    // Polarion Logout
 		TimeUnit.SECONDS.sleep(8);	    
@@ -128,6 +128,7 @@ public class LoginTest extends TestCase {
 	    // Conclude test
 	    TimeUnit.SECONDS.sleep(5);   // Wait till Login operation is done
 	    driver.close();
+	    driver.quit();
 	    
     }
 
