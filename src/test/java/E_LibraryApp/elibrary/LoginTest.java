@@ -99,8 +99,13 @@ public class LoginTest extends TestCase {
 	    }
 
 	    // Got to "Works Items" view
+	    currentURL = driver.getCurrentUrl();
+	    WI_URL = currentURL.substring(xStr.indexOf("/") + 1) + "/workitems");
+	    driver.get(WI_URL);
+	    
 		TimeUnit.SECONDS.sleep(6);
 	    driver.findElement(By.className("GAMH4D-CH2B")).click();
+	    System.out.println("Work Items view clicked");
 		WebDriverWait wait1 = new WebDriverWait(driver, 6);
 		wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("create_wi_icon_systemrequirement")));
 		
