@@ -98,37 +98,37 @@ public class LoginTest extends TestCase {
 	    	assertTrue(failedMsg,false);
 	    }
 
-	    TimeUnit.SECONDS.sleep(15);
-	    // Got to "Works Items" view
-	    WebDriverWait wait0 = new WebDriverWait(driver, 10);
-	    String currentURL = driver.getCurrentUrl();
-	    String WI_URL = currentURL.substring(currentURL.indexOf("?") + 1);
-	    driver.get(WI_URL + "/workitems");
-	    System.out.println("WI URL: "+WI_URL);
-	    System.out.println("WI URL: "+WI_URL + "/workitems");
-	    
-		TimeUnit.SECONDS.sleep(6);
-	    driver.findElement(By.className("GAMH4D-CH2B")).click();
-	    System.out.println("Work Items view clicked");
-		WebDriverWait wait1 = new WebDriverWait(driver, 6);
-		wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("create_wi_icon_systemrequirement")));
-		
-
-	    // Create WI and create Test Case linked to it
-		TimeUnit.SECONDS.sleep(6);
-	    driver.findElement(By.id("create_wi_icon_systemrequirement")).click();
-		WebDriverWait wait2 = new WebDriverWait(driver, 3);
-		wait2.until(ExpectedConditions.presenceOfElementLocated(By.className("GAMH4D-CIN")));
-		driver.findElement(By.className("GAMH4D-CIN")).sendKeys("Selenium Test Automation");
-
-		WebDriverWait wait3 = new WebDriverWait(driver, 3);
-		wait3.until(ExpectedConditions.presenceOfElementLocated(By.className("GAMH4D-CIN")));		
-		driver.findElement(By.id("DOM_280")).click();
-
-		String Ctrl_S = Keys.chord(Keys.CONTROL, "S");
-		driver.findElement(By.className("GAMH4D-CIN")).sendKeys(Ctrl_S);
-    
-	    
+//	    TimeUnit.SECONDS.sleep(6);
+//	    // Got to "Works Items" view
+//	    WebDriverWait wait0 = new WebDriverWait(driver, 10);
+//	    String currentURL = driver.getCurrentUrl();
+//	    String WI_URL = currentURL.substring(currentURL.indexOf("?") + 1);
+//	    driver.get(WI_URL + "/workitems");
+//	    System.out.println("WI URL: "+WI_URL);
+//	    System.out.println("WI URL: "+WI_URL + "/workitems");
+//	    
+//		TimeUnit.SECONDS.sleep(6);
+//	    driver.findElement(By.className("GAMH4D-CH2B")).click();
+//	    System.out.println("Work Items view clicked");
+//		WebDriverWait wait1 = new WebDriverWait(driver, 6);
+//		wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("create_wi_icon_systemrequirement")));
+//		
+//
+//	    // Create WI and create Test Case linked to it
+//		TimeUnit.SECONDS.sleep(6);
+//	    driver.findElement(By.id("create_wi_icon_systemrequirement")).click();
+//		WebDriverWait wait2 = new WebDriverWait(driver, 3);
+//		wait2.until(ExpectedConditions.presenceOfElementLocated(By.className("GAMH4D-CIN")));
+//		driver.findElement(By.className("GAMH4D-CIN")).sendKeys("Selenium Test Automation");
+//
+//		WebDriverWait wait3 = new WebDriverWait(driver, 3);
+//		wait3.until(ExpectedConditions.presenceOfElementLocated(By.className("GAMH4D-CIN")));		
+//		driver.findElement(By.id("DOM_280")).click();
+//
+//		String Ctrl_S = Keys.chord(Keys.CONTROL, "S");
+//		driver.findElement(By.className("GAMH4D-CIN")).sendKeys(Ctrl_S);
+//    
+//	    
 	    // Polarion Logout
 		TimeUnit.SECONDS.sleep(8);	    
 		WebDriverWait wait4 = new WebDriverWait(driver, 3);
