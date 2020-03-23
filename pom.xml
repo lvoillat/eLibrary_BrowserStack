@@ -37,12 +37,6 @@
         <version>0.1.0</version>
     </dependency>
     
-        <dependency>
-            <groupId>com.browserstack</groupId>
-            <artifactId>automate-testassist</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-	
 	<dependency>
 		<groupId>org.testng</groupId>
 		<artifactId>testng</artifactId>
@@ -82,7 +76,6 @@
 		  </suiteXmlFiles>
         </configuration>
       </plugin>
-      
      
     </plugins> 
   </build>
