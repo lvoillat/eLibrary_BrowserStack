@@ -102,7 +102,7 @@ public class LoginTest extends TestCase {
 		TimeUnit.SECONDS.sleep(6);
 	    driver.findElement(By.className("GAMH4D-CH2B")).click();
 		WebDriverWait wait1 = new WebDriverWait(driver, 3);
-		wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("GAMH4D-CH2B")));
+		wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("create_wi_icon_systemrequirement")));
 		
 
 	    // Create WI and create Test Case linked to it
