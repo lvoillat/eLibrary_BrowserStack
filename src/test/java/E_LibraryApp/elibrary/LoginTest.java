@@ -51,9 +51,9 @@ public class LoginTest extends TestCase {
 
 		/** BrowserStack
 		 */
-		String USERNAME = "lionelvoillat1";
-		String AUTOMATE_KEY = "c8qy1xrppgzqqvyTUK6E";
-		String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+//		String USERNAME = "lionelvoillat1";
+//		String AUTOMATE_KEY = "c8qy1xrppgzqqvyTUK6E";
+//		String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
 		// BrowserStack Local Testing
 		String username = System.getenv("BROWSERSTACK_USERNAME");
