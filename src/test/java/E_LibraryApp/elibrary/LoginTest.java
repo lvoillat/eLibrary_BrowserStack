@@ -98,6 +98,7 @@ public class LoginTest extends TestCase {
 	    	assertTrue(failedMsg,false);
 	    }
 
+		TimeUnit.SECONDS.sleep(6);
 	    // Got to "Works Items" view
 	    String currentURL = driver.getCurrentUrl();
 	    String WI_URL = currentURL.substring(currentURL.indexOf("?") + 1);
