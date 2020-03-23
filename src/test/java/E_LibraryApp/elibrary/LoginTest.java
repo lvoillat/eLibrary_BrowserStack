@@ -98,8 +98,9 @@ public class LoginTest extends TestCase {
 	    	assertTrue(failedMsg,false);
 	    }
 
+	    TimeUnit.SECONDS.sleep(15);
 	    // Got to "Works Items" view
-	    WebDriverWait wait0 = new WebDriverWait(driver, 6);
+	    WebDriverWait wait0 = new WebDriverWait(driver, 10);
 	    String currentURL = driver.getCurrentUrl();
 	    String WI_URL = currentURL.substring(currentURL.indexOf("?") + 1);
 	    driver.get(WI_URL + "/workitems");
