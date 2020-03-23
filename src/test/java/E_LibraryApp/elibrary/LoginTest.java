@@ -98,6 +98,12 @@ public class LoginTest extends TestCase {
 	    	assertTrue(failedMsg,false);
 	    }
 
+	    // Got to Works Items view
+		TimeUnit.SECONDS.sleep(6);
+	    driver.findElement(By.className("GAMH4D-CH2B")).click();
+		WebDriverWait wait2 = new WebDriverWait(driver, 3);
+		wait2.until(ExpectedConditions.presenceOfElementLocated(By.className("GAMH4D-CH2B")));
+		
 
 	    // Create WI and create Test Case linked to it
 		TimeUnit.SECONDS.sleep(6);
