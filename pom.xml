@@ -46,7 +46,7 @@
 	</dependency>
 
     <dependency>
-        <groupId>com.browserstack</groupId>
+        <groupId>E_LibraryApp.elibrary</groupId>
         <artifactId>automate-testassist</artifactId>
         <version>1.0.0</version>
     </dependency>
@@ -92,7 +92,7 @@
       </plugin>
 
       <plugin>
-        <groupId>com.browserstack</groupId>
+        <groupId>E_LibraryApp.elibrary</groupId>
         <artifactId>automate-maven-plugin</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <configuration>
