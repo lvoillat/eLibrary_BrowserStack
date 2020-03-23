@@ -99,9 +99,9 @@ public class LoginTest extends TestCase {
 	    }
 
 	    // Got to "Works Items" view
-		TimeUnit.SECONDS.sleep(6);
+		TimeUnit.SECONDS.sleep(12);
 	    driver.findElement(By.className("GAMH4D-CH2B")).click();
-		WebDriverWait wait1 = new WebDriverWait(driver, 3);
+		WebDriverWait wait1 = new WebDriverWait(driver, 12);
 		wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("create_wi_icon_systemrequirement")));
 		
 
