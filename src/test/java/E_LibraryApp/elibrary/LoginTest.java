@@ -86,7 +86,7 @@ public class LoginTest extends TestCase {
 	    try {
 		    // Anticipate web browser response, with an explicit wait
 	    	WebDriverWait wait = new WebDriverWait(driver, 5);
-	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("DOM_13")));   // Check for an existing element on the 1st page after login
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.className("polarion-Logo")));   // Check for an existing element on the 1st page after login
 	        System.out.println("Message: "+successMsg);
 	    	assertTrue(successMsg,true);
 	    }
@@ -99,9 +99,9 @@ public class LoginTest extends TestCase {
 	    }
 
 	    // Got to "Works Items" view
-		TimeUnit.SECONDS.sleep(12);
+		TimeUnit.SECONDS.sleep(6);
 	    driver.findElement(By.className("GAMH4D-CH2B")).click();
-		WebDriverWait wait1 = new WebDriverWait(driver, 12);
+		WebDriverWait wait1 = new WebDriverWait(driver, 6);
 		wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("create_wi_icon_systemrequirement")));
 		
 
