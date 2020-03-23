@@ -100,7 +100,7 @@ public class LoginTest extends TestCase {
 
 	    // Got to "Works Items" view
 	    String currentURL = driver.getCurrentUrl();
-	    String WI_URL = currentURL.substring(xStr.indexOf("?") + 1);
+	    String WI_URL = currentURL.substring(currentURL.indexOf("?") + 1);
 	    driver.get(WI_URL + "/workitems");
 	    System.out.println("WI URL: "+WI_URL);
 	    System.out.println("WI URL: "+WI_URL + "/workitems");
