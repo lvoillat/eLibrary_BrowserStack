@@ -17,6 +17,20 @@
    	<suiteXmlFile>testng.xml</suiteXmlFile> 	
   </properties>
 
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </pluginRepository>
+    </pluginRepositories>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -33,10 +47,10 @@
 
     <dependency>
         <groupId>com.browserstack</groupId>
-        <artifactId>browserstack-local-java</artifactId>
-        <version>0.1.0</version>
+        <artifactId>automate-testassist</artifactId>
+        <version>1.0.0</version>
     </dependency>
-    
+
 	<dependency>
 		<groupId>org.testng</groupId>
 		<artifactId>testng</artifactId>
@@ -75,6 +89,24 @@
 		  	<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 		  </suiteXmlFiles>
         </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.browserstack</groupId>
+        <artifactId>automate-maven-plugin</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+            <complianceLevel>1.8</complianceLevel>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test-compile</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
      
     </plugins> 

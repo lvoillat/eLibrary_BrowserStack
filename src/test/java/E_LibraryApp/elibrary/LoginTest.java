@@ -54,7 +54,14 @@ public class LoginTest extends TestCase {
 		String USERNAME = "lionelvoillat1";
 		String AUTOMATE_KEY = "c8qy1xrppgzqqvyTUK6E";
 		String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
-    	
+
+		// BrowserStack Local Testing
+		String username = System.getenv("BROWSERSTACK_USERNAME");
+		String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
+		String browserstackLocal = System.getenv("BROWSERSTACK_LOCAL");
+		String browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
+		
+		
 		// BrowserStack
 	    DesiredCapabilities caps = new DesiredCapabilities();
 	    caps.setCapability("browser", "Chrome");
@@ -64,8 +71,11 @@ public class LoginTest extends TestCase {
 	    caps.setCapability("os_version", "10");
 	    caps.setCapability("resolution", "1024x768");
 	    caps.setCapability("name", "Bstack-[Java] Sample Test");
-	    caps.setCapability("browserstack.local", "true");
-	    WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
+	    //caps.setCapability("browserstack.local", "true");
+	    caps.setCapability("browserstack.local", browserstackLocal);
+caps.setCapability("browserstack.localIdentifier", browserstackLocalIdentifier);
+driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + "@hub.browserstack.com/wd/hub"), caps);
+//		WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
 	    
 	    // TEST - Open Polarion and login 
         driver.get(polarionURL);	    
