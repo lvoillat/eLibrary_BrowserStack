@@ -100,9 +100,10 @@ public class LoginTest extends TestCase {
 
 	    // Got to "Works Items" view
 	    currentURL = driver.getCurrentUrl();
-	    WI_URL = currentURL.substring(xStr.indexOf("/") + 1) + "/workitems");
-	    driver.get(WI_URL);
+	    WI_URL = currentURL.substring(xStr.indexOf("?") + 1);
+	    driver.get(WI_URL + "/workitems");
 	    System.out.println("WI URL: "+WI_URL);
+	    System.out.println("WI URL: "+WI_URL + "/workitems");
 	    
 		TimeUnit.SECONDS.sleep(6);
 	    driver.findElement(By.className("GAMH4D-CH2B")).click();
