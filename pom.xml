@@ -91,6 +91,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M3</version>
         <configuration>
+            <include>LoginTest.java</include>
 <!--         <testFailureIgnore>true</testFailureIgnore> -->
 <!-- 
  		  <suiteXmlFiles>
