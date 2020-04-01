@@ -57,8 +57,7 @@
         <groupId>com.browserstack</groupId>
         <artifactId>browserstack-local-java</artifactId>
         <version>0.1.0</version>
-    </dependency>
-    
+    </dependency>   
 	<dependency>
 		<groupId>org.testng</groupId>
 		<artifactId>testng</artifactId>
@@ -108,7 +107,6 @@
             <target>1.8</target>
             <complianceLevel>1.8</complianceLevel>
         </configuration>
-<!--
         <executions>
           <execution>
             <goals>
@@ -116,7 +114,6 @@
             </goals>
           </execution>
         </executions>
--->
       </plugin>
      
     </plugins> 
