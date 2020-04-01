@@ -92,9 +92,11 @@
         <version>3.0.0-M3</version>
         <configuration>
 <!--         <testFailureIgnore>true</testFailureIgnore> -->
+<!-- 
  		  <suiteXmlFiles>
 		  	<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 		  </suiteXmlFiles>
+		  -->
         </configuration>
       </plugin>
 
