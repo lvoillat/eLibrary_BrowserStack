@@ -107,6 +107,7 @@
             <target>1.8</target>
             <complianceLevel>1.8</complianceLevel>
         </configuration>
+<!--
         <executions>
           <execution>
             <goals>
@@ -114,6 +115,7 @@
             </goals>
           </execution>
         </executions>
+-->        
       </plugin>
      
     </plugins> 
