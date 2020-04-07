@@ -16,22 +16,6 @@
     <maven.compiler.target>1.6</maven.compiler.target>
    	<suiteXmlFile>testng.xml</suiteXmlFile> 	
   </properties>
-
-<!-- Browserstack -->
-    <repositories>
-        <repository>
-            <id>sonatype-nexus-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </pluginRepository>
-    </pluginRepositories>
-<!--  -->
  
   <dependencies>
     <dependency>
@@ -84,6 +68,24 @@
     </dependency>
 
   </dependencies>
+	
+	<!-- Browserstack -->
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </pluginRepository>
+    </pluginRepositories>
+<!--  -->
+	
+	
   <build> 
     <plugins>
     <plugin> 
